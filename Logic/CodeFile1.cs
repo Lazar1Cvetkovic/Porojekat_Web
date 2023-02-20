@@ -38,16 +38,16 @@ namespace WebApplication10.Logic
             var appUser = new ApplicationUser
 
             {
-                UserName = "ilija@gmail.com",
-                Email = "ilija@gmail.com"
+                UserName = "Cvetko@gmail.com",
+                Email = "Cvetko@gmail.com"
             };
 
             IdUserResult = userMgr.Create(appUser, "Zavesa123!");
 
 
-            if (!userMgr.IsInRole(userMgr.FindByEmail("ilija@gmail.com").Id, "Admin"))
+            if (!userMgr.IsInRole(userMgr.FindByEmail("Cvetko@gmail.com").Id, "Admin"))
             {
-                IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("ilija@gmail.com").Id, "Admin");
+                IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("Cvetko@gmail.com").Id, "Admin");
             }
 
 
